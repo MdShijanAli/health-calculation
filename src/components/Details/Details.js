@@ -5,8 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 
-const Details = () => {
+const Details = ({ time }) => {
 
+    // console.log(time);
+
+    let total = 0;
+
+    for (const pro of time) {
+        console.log(pro);
+        total = total + pro.time;
+    }
 
 
     const handleBtn1 = () => {
@@ -14,7 +22,6 @@ const Details = () => {
         const showBreakeTime = document.getElementById('showBreakTime')
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
-        console.log(value);
     }
     const handleBtn2 = () => {
         const breakeTime = document.getElementById('breakTime2');
@@ -22,7 +29,6 @@ const Details = () => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        console.log(value);
     }
     const handleBtn3 = () => {
         const breakeTime = document.getElementById('breakTime3');
@@ -30,7 +36,6 @@ const Details = () => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        console.log(value);
     }
     const handleBtn4 = () => {
         const breakeTime = document.getElementById('breakTime4');
@@ -38,7 +43,6 @@ const Details = () => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        console.log(value);
     }
     const handleBtn5 = () => {
         const breakeTime = document.getElementById('breakTime5');
@@ -46,8 +50,12 @@ const Details = () => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        console.log(value);
     }
+
+
+
+
+
     return (
         <div>
             <div className="details-container">
@@ -91,7 +99,7 @@ const Details = () => {
 
                 <div className='exercise-details'>
                     <h4>Exercise time</h4>
-                    <p><span>200</span> seconds</p>
+                    <p>{total} seconds</p>
                 </div>
                 <div className='exercise-details'>
                     <h4>Break time</h4>

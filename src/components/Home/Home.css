@@ -7,9 +7,37 @@
 .right-side {
     background-color: ivory;
     padding: 10px 30px 50px 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .left-side {
     background-color: aquamarine;
     padding: 50px 100px;
+
+
+
+}
+
+
+
+/*  */
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.icon-title {
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.players-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+
 }

@@ -1,18 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Details from '../Details/Details';
-import Players from '../Players/Players';
+
 import './Home.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+import Player from '../Player/Player';
 
 const Home = () => {
+    const [players, setPlayers] = useState([]);
+    const [time, setTime] = useState([]);
+
+    useEffect(() => {
+        fetch('fakeData.json')
+            .then(res => res.json())
+            .then(data => setPlayers(data))
+    }, [])
+
+    // console.log(players);
+
+    const handleAddToList = (player) => {
+        // console.log(player);
+
+        const newTime = [...time, player];
+        setTime(newTime);
+    }
+    // console.log(newTime);
     return (
         <div>
             <div className="home-container">
                 <div className="left-side">
+                    <div className='title'>
+                        <FontAwesomeIcon className='icon-title' icon={faDumbbell}></FontAwesomeIcon><h1>Make Your Good Health</h1>
+                    </div>
+                    <h2> Select Today's Exercise</h2>
 
-                    <Players></Players>
+                    <div className='players-box'>
+                        {
+                            players.map(player => <Player
+                                player={player}
+                                key={player.id}
+                                handleAddToList={handleAddToList}
+                            ></Player>)
+                        }
+                    </div>
+
+
                 </div>
+
                 <div className="right-side">
-                    <Details></Details>
+
+                    <Details
+                        time={time}
+                    ></Details>
                 </div>
             </div>
         </div>
