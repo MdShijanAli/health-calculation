@@ -1,0 +1,77 @@
+/* .details-container {
+    background-color: gainsboro;
+    height: 100%;
+} */
+
+.img-box {
+    display: flex;
+    align-items: center;
+    /* padding-top: 20px; */
+}
+
+.img-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.img-box-text {
+    margin-left: 20px;
+    line-height: .5em;
+
+}
+
+.img-box-text .icon {
+    margin-right: 10px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ddd;
+    line-height: .7em;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.small {
+    font-size: 16px;
+}
+
+.breakTime-container {
+    justify-content: space-evenly;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn {
+
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border: none;
+}
+
+.exercise-details {
+    display: flex;
+    background-color: #DDD;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.activity-completed-btn {
+    background-color: darkcyan;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-top: 50px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+}
