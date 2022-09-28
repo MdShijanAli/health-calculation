@@ -1,9 +1,15 @@
 .home-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+
 }
 
 .right-side {
     background-color: ivory;
     padding: 10px 30px 50px 30px;
+}
+
+.left-side {
+    background-color: aquamarine;
+    padding: 50px 100px;
 }

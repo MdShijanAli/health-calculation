@@ -8,6 +8,7 @@ const Home = () => {
         <div>
             <div className="home-container">
                 <div className="left-side">
+
                     <Players></Players>
                 </div>
                 <div className="right-side">

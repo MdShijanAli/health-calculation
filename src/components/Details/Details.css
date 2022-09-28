@@ -75,3 +75,7 @@
     border-radius: 10px;
     font-size: 20px;
 }
+
+.activity-completed-btn:hover {
+    background-color: dodgerblue;
+}

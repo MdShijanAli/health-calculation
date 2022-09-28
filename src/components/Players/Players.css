@@ -1,5 +1,17 @@
-.players-container {
-    background-color: paleturquoise;
-    height: 250px;
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.icon-title {
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.players-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
 
 }
