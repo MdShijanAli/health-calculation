@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Details.css';
 import image from '../../../src/shijan.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +6,48 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 
 const Details = () => {
+
+
+
+    const handleBtn1 = () => {
+        const breakeTime = document.getElementById('breakTime1');
+        const showBreakeTime = document.getElementById('showBreakTime')
+        const value = breakeTime.innerText;
+        showBreakeTime.innerText = value;
+        console.log(value);
+    }
+    const handleBtn2 = () => {
+        const breakeTime = document.getElementById('breakTime2');
+        const showBreakeTime = document.getElementById('showBreakTime')
+        const value = breakeTime.innerText;
+        showBreakeTime.innerText = value;
+
+        console.log(value);
+    }
+    const handleBtn3 = () => {
+        const breakeTime = document.getElementById('breakTime3');
+        const showBreakeTime = document.getElementById('showBreakTime')
+        const value = breakeTime.innerText;
+        showBreakeTime.innerText = value;
+
+        console.log(value);
+    }
+    const handleBtn4 = () => {
+        const breakeTime = document.getElementById('breakTime4');
+        const showBreakeTime = document.getElementById('showBreakTime')
+        const value = breakeTime.innerText;
+        showBreakeTime.innerText = value;
+
+        console.log(value);
+    }
+    const handleBtn5 = () => {
+        const breakeTime = document.getElementById('breakTime5');
+        const showBreakeTime = document.getElementById('showBreakTime')
+        const value = breakeTime.innerText;
+        showBreakeTime.innerText = value;
+
+        console.log(value);
+    }
     return (
         <div>
             <div className="details-container">
@@ -37,11 +79,11 @@ const Details = () => {
                 <h3>Add A Break</h3>
 
                 <div className='breakTime-container'>
-                    <button className='btn'><span>10</span>s</button>
-                    <button className='btn'><span>20</span>s</button>
-                    <button className='btn'><span>30</span>s</button>
-                    <button className='btn'><span>40</span>s</button>
-                    <button className='btn'><span>50</span>s</button>
+                    <button onClick={handleBtn1} className='btn'><span id='breakTime1'>10</span>s</button>
+                    <button onClick={handleBtn2} className='btn'><span id='breakTime2'>20</span>s</button>
+                    <button onClick={handleBtn3} className='btn'><span id='breakTime3'>30</span>s</button>
+                    <button onClick={handleBtn4} className='btn'><span id='breakTime4'>40</span>s</button>
+                    <button onClick={handleBtn5} className='btn'><span id='breakTime5'>50</span>s</button>
 
                 </div>
 
@@ -53,7 +95,7 @@ const Details = () => {
                 </div>
                 <div className='exercise-details'>
                     <h4>Break time</h4>
-                    <p><span>15</span> seconds</p>
+                    <p><span id='showBreakTime'>15</span> seconds</p>
                 </div>
 
                 <button className='activity-completed-btn'>Activity Completed</button>
