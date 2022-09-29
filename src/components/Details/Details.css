@@ -1,107 +1,106 @@
-.details-container {
-    position: sticky;
-    top: 0;
+ .sticky {
+     position: sticky;
+     top: 0;
+ }
 
-}
+ .img-box {
+     display: flex;
+     align-items: center;
 
-.img-box {
-    display: flex;
-    align-items: center;
-    /* padding-top: 20px; */
-}
+ }
 
-.img-box img {
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-}
+ .img-box img {
+     width: 50px;
+     height: 50px;
+     border-radius: 15px;
+ }
 
-.img-box-text {
-    margin-left: 20px;
-    line-height: .5em;
+ .img-box-text {
+     margin-left: 20px;
+     line-height: .5em;
 
-}
+ }
 
-.img-box-text .icon {
-    margin-right: 10px;
-}
+ .img-box-text .icon {
+     margin-right: 10px;
+ }
 
-.info-box {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #ddd;
-    line-height: .7em;
-    border-radius: 10px;
-    margin-top: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-    box-shadow: 1px 7px 10px #333;
-}
+ .info-box {
+     display: flex;
+     justify-content: space-evenly;
+     background-color: #ddd;
+     line-height: .7em;
+     border-radius: 10px;
+     margin-top: 20px;
+     align-items: center;
+     margin-bottom: 30px;
+     box-shadow: 1px 7px 10px #333;
+ }
 
-.small {
-    font-size: 16px;
-}
+ .small {
+     font-size: 16px;
+ }
 
-.breakTime-container {
-    justify-content: space-evenly;
-    background-color: #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    box-shadow: 1px 7px 10px #333;
-}
+ .breakTime-container {
+     justify-content: space-evenly;
+     background-color: #ddd;
+     padding: 20px;
+     border-radius: 10px;
+     display: flex;
+     box-shadow: 1px 7px 10px #333;
+ }
 
-.btn {
+ .btn {
 
-    border-radius: 100%;
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
-    border: none;
-    background-color: darkturquoise;
-    box-shadow: 1px 7px 10px #333;
-}
+     border-radius: 100%;
+     width: 45px;
+     height: 45px;
+     margin-right: 10px;
+     border: none;
+     background-color: darkturquoise;
+     box-shadow: 1px 7px 10px #333;
+ }
 
-.btn:hover {
-    background-color: #ddd;
-    border: 2px solid darkturquoise;
-}
+ .btn:hover {
+     background-color: #ddd;
+     border: 2px solid darkturquoise;
+ }
 
-.exercise-details {
-    display: flex;
-    background-color: #DDD;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 1px 7px 10px #333;
-}
+ .exercise-details {
+     display: flex;
+     background-color: #DDD;
+     margin-bottom: 20px;
+     border-radius: 10px;
+     justify-content: space-around;
+     align-items: center;
+     box-shadow: 1px 7px 10px #333;
+ }
 
-.activity-completed-btn {
-    background-color: darkcyan;
-    width: 100%;
-    border: none;
-    padding: 20px;
-    margin-top: 50px;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 20px;
-    box-shadow: 1px 7px 10px #333;
-}
+ .activity-completed-btn {
+     background-color: darkcyan;
+     width: 100%;
+     border: none;
+     padding: 20px;
+     margin-top: 50px;
+     color: #fff;
+     border-radius: 10px;
+     font-size: 20px;
+     box-shadow: 1px 7px 10px #333;
+ }
 
-.activity-completed-btn:hover {
-    background-color: #ddd;
-    border: 2px solid darkturquoise;
-    color: #333;
-}
+ .activity-completed-btn:hover {
+     background-color: #ddd;
+     border: 2px solid darkturquoise;
+     color: #333;
+ }
 
 
-@media screen and (min-width:768px) and (max-width:1200px) {}
+ @media screen and (min-width:768px) and (max-width:1200px) {}
 
-@media screen and (max-width:767px) {
-    .details-container {
+ @media screen and (max-width:767px) {
+     .details-container {
 
-        padding-bottom: 50px;
+         padding-bottom: 50px;
 
-    }
-}
+     }
+ }

@@ -1,11 +1,9 @@
-
 import './Details.css';
 import image from '../../../src/shijan.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addToDb, getStoredCart } from '../../Utilities/fakedb';
 import { useEffect, useState } from 'react';
 
 
@@ -54,20 +52,8 @@ const Details = ({ time }) => {
     }
 
 
-    useEffect(() => {
-
-        const storedCart = getStoredCart();
-        if (storedCart) {
-
-            console.log(storedCart);
-
-        }
-
-    }, []);
-
-
     return (
-        <div>
+        <div className='sticky'>
             <div className="details-container">
 
                 <div className='img-box'>
@@ -118,6 +104,7 @@ const Details = ({ time }) => {
 
                 <button onClick={notify} className='activity-completed-btn'>Activity Completed</button>
                 <ToastContainer></ToastContainer>
+
 
             </div>
         </div>

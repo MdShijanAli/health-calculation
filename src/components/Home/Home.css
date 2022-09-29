@@ -6,10 +6,12 @@
 }
 
 .right-side {
+
     background-color: ivory;
     padding: 10px 30px 50px 30px;
-    position: relative;
+    position: sticky;
     top: 0;
+
 
 }
 
@@ -53,6 +55,8 @@
         grid-template-columns: 1fr 1fr;
 
     }
+
+
 
     .left-side {
 
