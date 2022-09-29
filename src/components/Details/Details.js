@@ -3,9 +3,21 @@ import './Details.css';
 import image from '../../../src/shijan.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
 
 
 const Details = ({ time }) => {
+
+    const notify = () => {
+        toast('Your Data Has Benn Submitted!!', { position: toast.POSITION.TOP_CENTER })
+    }
+
+
 
     // console.log(time);
 
@@ -41,15 +53,15 @@ const Details = ({ time }) => {
 
                 <div className="info-box">
                     <div>
-                        <h1>75<span className='small'>kg</span></h1>
+                        <h1>78<span className='small'>kg</span></h1>
                         <p>Weight</p>
                     </div>
                     <div>
-                        <h1>6.5</h1>
+                        <h1>5.9</h1>
                         <p>Height</p>
                     </div>
                     <div>
-                        <h1>25<span className='small'>yrs</span></h1>
+                        <h1>22<span className='small'>yrs</span></h1>
                         <p>Age</p>
                     </div>
                 </div>
@@ -73,10 +85,11 @@ const Details = ({ time }) => {
                 </div>
                 <div className='exercise-details'>
                     <h4>Break time</h4>
-                    <p><span id='showBreakTime'>15</span> seconds</p>
+                    <p><span id='showBreakTime'>00</span> seconds</p>
                 </div>
 
-                <button className='activity-completed-btn'>Activity Completed</button>
+                <button onClick={notify} className='activity-completed-btn'>Activity Completed</button>
+                <ToastContainer></ToastContainer>
 
             </div>
         </div>
