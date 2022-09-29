@@ -17,43 +17,13 @@ const Details = ({ time }) => {
     }
 
 
-    const handleBtn1 = () => {
-        const breakeTime = document.getElementById('breakTime1');
-        const showBreakeTime = document.getElementById('showBreakTime')
-        const value = breakeTime.innerText;
-        showBreakeTime.innerText = value;
-    }
-    const handleBtn2 = () => {
-        const breakeTime = document.getElementById('breakTime2');
+    const handleBtn = (breakTime) => {
+        const breakeTime = document.getElementById(breakTime);
         const showBreakeTime = document.getElementById('showBreakTime')
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
     }
-    const handleBtn3 = () => {
-        const breakeTime = document.getElementById('breakTime3');
-        const showBreakeTime = document.getElementById('showBreakTime')
-        const value = breakeTime.innerText;
-        showBreakeTime.innerText = value;
-
-    }
-    const handleBtn4 = () => {
-        const breakeTime = document.getElementById('breakTime4');
-        const showBreakeTime = document.getElementById('showBreakTime')
-        const value = breakeTime.innerText;
-        showBreakeTime.innerText = value;
-
-    }
-    const handleBtn5 = () => {
-        const breakeTime = document.getElementById('breakTime5');
-        const showBreakeTime = document.getElementById('showBreakTime')
-        const value = breakeTime.innerText;
-        showBreakeTime.innerText = value;
-
-    }
-
-
-
 
 
     return (
@@ -87,11 +57,11 @@ const Details = ({ time }) => {
                 <h3>Add A Break</h3>
 
                 <div className='breakTime-container'>
-                    <button onClick={handleBtn1} className='btn'><span id='breakTime1'>10</span>s</button>
-                    <button onClick={handleBtn2} className='btn'><span id='breakTime2'>20</span>s</button>
-                    <button onClick={handleBtn3} className='btn'><span id='breakTime3'>30</span>s</button>
-                    <button onClick={handleBtn4} className='btn'><span id='breakTime4'>40</span>s</button>
-                    <button onClick={handleBtn5} className='btn'><span id='breakTime5'>50</span>s</button>
+                    <button onClick={() => { handleBtn('breakTime1') }} className='btn'><span id='breakTime1'>10</span>s</button>
+                    <button onClick={() => { handleBtn('breakTime2') }} className='btn'><span id='breakTime2'>20</span>s</button>
+                    <button onClick={() => { handleBtn('breakTime3') }} className='btn'><span id='breakTime3'>30</span>s</button>
+                    <button onClick={() => { handleBtn('breakTime4') }} className='btn'><span id='breakTime4'>40</span>s</button>
+                    <button onClick={() => { handleBtn('breakTime5') }} className='btn'><span id='breakTime5'>50</span>s</button>
 
                 </div>
 
