@@ -2,21 +2,20 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 
+
 }
 
 .right-side {
     background-color: ivory;
     padding: 10px 30px 50px 30px;
-    position: fixed;
+    position: sticky;
     top: 0;
-    right: 0;
+
 }
 
 .left-side {
     background-color: aquamarine;
     padding: 50px 100px;
-
-
 
 }
 
@@ -38,4 +37,44 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+/* tablet view */
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .players-box {
+        grid-template-columns: 1fr;
+    }
+
+    .home-container {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .left-side {
+
+        padding: 30px;
+    }
+
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+    .home-container {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .players-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left-side,
+    .right-side {
+
+        padding: 20px;
+    }
 }

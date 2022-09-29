@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToDb, getStoredCart } from '../../Utilities/fakedb';
+import { useEffect } from 'react';
 
 
 
@@ -12,6 +14,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Details = ({ time }) => {
+
+
 
     const notify = () => {
         toast('Your Data Has Benn Submitted!!', { position: toast.POSITION.TOP_CENTER })
@@ -24,7 +28,7 @@ const Details = ({ time }) => {
     let total = 0;
 
     for (const pro of time) {
-        console.log(pro);
+        // console.log(pro);
         total = total + pro.time;
     }
 
@@ -35,7 +39,21 @@ const Details = ({ time }) => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
+        // console.log(value);
+        addToDb(value);
+
+
+
     }
+    useEffect(() => {
+
+        const storedCart = getStoredCart();
+        if (storedCart) {
+            console.log(storedCart);
+
+        }
+
+    }, []);
 
 
     return (

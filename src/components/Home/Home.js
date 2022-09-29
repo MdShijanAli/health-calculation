@@ -24,6 +24,7 @@ const Home = () => {
 
         const newTime = [...time, player];
         setTime(newTime);
+
     }
     // console.log(newTime);
     return (

@@ -4,7 +4,7 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div>
-            <div>
+            <div className='blog-section'>
                 <div>
                     <h1>How Does React Work?</h1>
                     <p>1. Easy to Use
