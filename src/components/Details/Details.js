@@ -30,7 +30,9 @@ const Details = ({ time }) => {
     for (const pro of time) {
         // console.log(pro);
         total = total + pro.time;
+        // console.log(total);
     }
+
 
 
     const handleBtn = (breakTime) => {
@@ -39,16 +41,18 @@ const Details = ({ time }) => {
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        // console.log(value);
         addToDb(value);
-
-
+        // console.log(value);
 
     }
+
+
     useEffect(() => {
 
         const storedCart = getStoredCart();
         if (storedCart) {
+
+
             console.log(storedCart);
 
         }

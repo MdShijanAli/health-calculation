@@ -31,6 +31,8 @@ const getStoredCart = () => {
     }
     return shoppingCart;
 }
+
+
 const removeFromDb = id => {
     const storedCart = localStorage.getItem('break-time');
     if (storedCart) {
