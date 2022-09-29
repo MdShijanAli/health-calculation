@@ -1,6 +1,7 @@
 .details-container {
     position: sticky;
     top: 0;
+
 }
 
 .img-box {
@@ -58,6 +59,7 @@
     margin-right: 10px;
     border: none;
     background-color: darkturquoise;
+    box-shadow: 1px 7px 10px #333;
 }
 
 .btn:hover {
@@ -95,3 +97,11 @@
 
 
 @media screen and (min-width:768px) and (max-width:1200px) {}
+
+@media screen and (max-width:767px) {
+    .details-container {
+
+        padding-bottom: 50px;
+
+    }
+}

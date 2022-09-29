@@ -6,7 +6,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addToDb, getStoredCart } from '../../Utilities/fakedb';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -15,15 +15,9 @@ import { useEffect } from 'react';
 
 const Details = ({ time }) => {
 
-
-
     const notify = () => {
         toast('Your Data Has Benn Submitted!!', { position: toast.POSITION.TOP_CENTER })
     }
-
-
-
-    // console.log(time);
 
     let total = 0;
 
@@ -34,14 +28,27 @@ const Details = ({ time }) => {
     }
 
 
+    const [brakeTime, setBrakeTime] = useState('');
+    useEffect(() => {
+        const brakeTime = localStorage.getItem('break-time');
+        if (brakeTime) {
+            setBrakeTime(brakeTime);
+            (document.getElementById('showBreakTime')).innerText = brakeTime;
+        }
+    }, [])
 
-    const handleBtn = (breakTime) => {
+    useEffect(() => {
+        localStorage.setItem('break-time', brakeTime);
+    }, [brakeTime]);
+
+
+    function handleBtn(breakTime) {
         const breakeTime = document.getElementById(breakTime);
         const showBreakeTime = document.getElementById('showBreakTime')
         const value = breakeTime.innerText;
         showBreakeTime.innerText = value;
 
-        addToDb(value);
+        setBrakeTime(value);
         // console.log(value);
 
     }
@@ -51,7 +58,6 @@ const Details = ({ time }) => {
 
         const storedCart = getStoredCart();
         if (storedCart) {
-
 
             console.log(storedCart);
 

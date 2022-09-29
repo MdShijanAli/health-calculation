@@ -1,14 +1,14 @@
 .home-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
-
+    position: relative;
 
 }
 
 .right-side {
     background-color: ivory;
     padding: 10px 30px 50px 30px;
-    position: sticky;
+    position: relative;
     top: 0;
 
 }
@@ -19,13 +19,16 @@
 
 }
 
-
+.center {
+    text-align: center;
+}
 
 /*  */
 
 .title {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .icon-title {

@@ -34,7 +34,7 @@ const Home = () => {
                     <div className='title'>
                         <FontAwesomeIcon className='icon-title' icon={faDumbbell}></FontAwesomeIcon><h1>Make Your Good Health</h1>
                     </div>
-                    <h2> Select Today's Exercise</h2>
+                    <h2 className='center'> Select Today's Exercise</h2>
 
                     <div className='players-box'>
                         {

@@ -28,6 +28,7 @@ const getStoredCart = () => {
     const storedCart = localStorage.getItem('break-time');
     if (storedCart) {
         shoppingCart = JSON.parse(storedCart);
+        localStorage.setItem('break-time', JSON.stringify(shoppingCart));
     }
     return shoppingCart;
 }
